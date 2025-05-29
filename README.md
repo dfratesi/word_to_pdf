@@ -44,6 +44,35 @@ Esta es una aplicación de escritorio para Windows que convierte archivos .doc y
    pip install customtkinter docx2pdf pywin32
    ```
 
+## Creación de Ejecutable Portable
+
+Para crear un archivo ejecutable portable (.exe) que no requiera tener Python instalado:
+
+1. **Instala PyInstaller:**
+
+   ```bash
+   pip install pyinstaller
+   ```
+
+2. **Genera el ejecutable:**
+
+   ```bash
+   pyinstaller --onefile --windowed --name "ConvertidorWordToPDF" app_convertidor_gui.py
+   ```
+
+   **Parámetros explicados:**
+   - `--onefile`: Crea un único archivo ejecutable
+   - `--windowed`: Evita que aparezca la ventana de consola (solo la GUI)
+   - `--name`: Especifica el nombre del archivo ejecutable
+
+3. **Ubicación del ejecutable:**
+   El archivo ejecutable se generará en la carpeta `dist/ConvertidorWordToPDF.exe`
+
+4. **Distribución:**
+   Puedes copiar el archivo `ConvertidorWordToPDF.exe` a cualquier computadora con Windows que tenga Microsoft Word instalado, sin necesidad de instalar Python ni dependencias adicionales.
+
+**Nota:** El archivo ejecutable será de mayor tamaño (aproximadamente 15-20 MB) ya que incluye el intérprete de Python y todas las dependencias necesarias.
+
 ## Uso
 
 1. Ejecuta la aplicación:

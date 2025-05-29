@@ -1,0 +1,13 @@
+{
+  "folders": [
+    {
+      "path": "."
+    }
+  ],
+  "settings": {
+    "editor.rulers": [88],
+    "editor.fontFamily": "FiraCode",
+    "editor.mouseWheelZoom": true,
+    "editor.fontLigatures": true
+  }
+}

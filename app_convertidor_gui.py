@@ -10,10 +10,10 @@ import queue
 import traceback
 import tempfile
 import time
-import signal
+
 from concurrent.futures import ThreadPoolExecutor, TimeoutError
 import subprocess
-import sys
+
 
 # --- Dependencias específicas de Windows ---
 try:
@@ -306,7 +306,7 @@ def convertir_archivos_worker_windows(
                 else:
                     log_message(
                         text_widget_log,
-                        f"  ✗ ERROR: PDF no generado o está vacío",
+                        "  ✗ ERROR: PDF no generado o está vacío",
                     )
                     archivos_fallidos += 1
 
@@ -324,7 +324,7 @@ def convertir_archivos_worker_windows(
                         os.remove(temp_docx_file_path)
                         log_message(
                             text_widget_log,
-                            f"  Archivo temporal eliminado",
+                            "  Archivo temporal eliminado",
                         )
                     except Exception as del_e:
                         log_message(

@@ -26,7 +26,7 @@ Esta es una aplicación de escritorio para Windows que convierte archivos .doc y
 1. **Clona el repositorio (o descarga los archivos):**
 
    ```bash
-   git clone https://github.com/tu_usuario/tu_repositorio.git
+   git clone https://github.com/tu_usuario/word_to_pdf.git
    cd tu_repositorio
    ```
 

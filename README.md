@@ -54,21 +54,23 @@ Para crear un archivo ejecutable portable (.exe) que no requiera tener Python in
    pip install pyinstaller
    ```
 
-2. **Genera el ejecutable:**
+2. **Genera el ejecutable:** 🔧
 
    ```bash
-   pyinstaller --onefile --windowed --name "ConvertidorWordToPDF" app_convertidor_gui.py
+   pyinstaller --onefile --windowed --name "ConvertidorWordPDF" --hidden-import customtkinter --hidden-import docx2pdf --hidden-import win32com.client app_convertidor_gui.py
    ```
 
    **Parámetros explicados:**
-   - `--onefile`: Crea un único archivo ejecutable
-   - `--windowed`: Evita que aparezca la ventana de consola (solo la GUI)
-   - `--name`: Especifica el nombre del archivo ejecutable
 
-3. **Ubicación del ejecutable:**
+   - 📦 `--onefile`: Crea un único archivo ejecutable.
+   - 🚫 `--windowed`: Evita que aparezca la ventana de consola (solo la GUI).
+   - 🏷️ `--name`: Especifica el nombre del archivo ejecutable.
+   - 🧩 `--hidden-import`: Incluye módulos que PyInstaller no detecta automáticamente.
+
+3. **Ubicación del ejecutable:** 📂
    El archivo ejecutable se generará en la carpeta `dist/ConvertidorWordToPDF.exe`
 
-4. **Distribución:**
+4. **Distribución:** 🚀
    Puedes copiar el archivo `ConvertidorWordToPDF.exe` a cualquier computadora con Windows que tenga Microsoft Word instalado, sin necesidad de instalar Python ni dependencias adicionales.
 
 **Nota:** El archivo ejecutable será de mayor tamaño (aproximadamente 15-20 MB) ya que incluye el intérprete de Python y todas las dependencias necesarias.
